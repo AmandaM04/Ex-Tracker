@@ -1,0 +1,29 @@
+{
+  "locations":
+  [
+    {
+		"Location Image": "https://afar-production.imgix.net/uploads/images/post_images/images/qVj1FxN3tt/original_2ec4a48fa0a239d9df8c552cfd5c40ec.jpg?1468157243?ixlib=rails-0.3.0&auto=format%2Ccompress&crop=entropy&fit=crop&h=719&q=80&w=954&dpr=2",
+		"Name": "Husk",
+		"Location Address": "37 Rutledge St, Nashville, TN 37210",
+		"Time That Ex Normally Goes": "Afternoon"
+    },
+    {
+    "Location Image": "https://i1.wp.com/www.anniereeves.com/wp-content/uploads/2014/10/pinewoodsocial3.jpg",
+    "Name": "Pinewood Social",
+    "Location Address": "33 Peabody St, Nashville, TN 37210",
+    "Time That Ex Normally Goes": "After Dark"
+    },
+    {
+    "Location Image": "http://collegian.csufresno.edu/a/wp-content/uploads/2018/01/Cheesecake_Factory-620x330.jpg",
+    "Name": "Cheesecake Factory",
+    "Location Address": "2133 Green Hills Village Dr, Nashville, TN 37215",
+    "Time That Ex Normally Goes": "Dark"
+    },
+    {
+    "Location Image": "http://gluten-free-bread.org/wp-content/uploads/2014/11/pfunkyGriddle1.jpg",
+    "Name": "The Pfunky Griddle",
+    "Location Address": "2800 Bransford Ave, Nashville, TN 37204",
+    "Time That Ex Normally Goes": "Morning"
+    }
+  ]
+}
