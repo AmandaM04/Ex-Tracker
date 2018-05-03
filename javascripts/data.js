@@ -1,8 +1,10 @@
 // Error and success functions for AJAX call
 const loadEx = require('./ex');
+const writeEx = require('./dom');
 
 const whenExLoads = (data) => {
-  console.log('data', data);
+  // console.log('data', data);
+  $('#exSpot').append(writeEx(data.ex));
 };
 
 const whenExFails = (error) => {
