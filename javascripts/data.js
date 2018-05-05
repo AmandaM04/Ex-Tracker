@@ -1,18 +1,25 @@
 // Error and success functions for AJAX call
 const loadEx = require('./ex');
-const writeEx = require('./dom');
+const loadLocations = require('./locations');
+const writeBoth = require('./dom');
 
 const whenExLoads = (data) => {
   // console.log('data', data);
-  $('#exSpot').append(writeEx(data.ex));
+  $('#exSpot').append(writeBoth.writeEx(data.ex));
 };
 
-const whenExFails = (error) => {
+const whenLocationsLoads = (data) => {
+  // console.log('data', data);
+  $('#exLocation').append(writeBoth.writeLocations(data.locations));
+};
+
+const whenFails = (error) => {
   console.log('error', error);
 };
 
 const initializer = () => {
-  loadEx(whenExLoads, whenExFails);
+  loadEx(whenExLoads, whenFails);
+  loadLocations(whenLocationsLoads, whenFails);
 };
 
 module.exports = initializer;
