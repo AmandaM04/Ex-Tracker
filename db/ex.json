@@ -1,11 +1,9 @@
 {
   "ex":
-  [
     {
 		"image": "https://img.buzzfeed.com/buzzfeed-static/static/2017-09/13/12/asset/buzzfeed-prod-fastlane-03/sub-buzz-5026-1505321845-1.jpg",
 		"name": "Stuart Little",
 		"age": 42,
-		"flaws": " Too clingy, Too much body hair, Too Short, Too Smart,"
+		"flaws": " Too clingy, Too much body hair, Too Short"
     }
-  ]
 }
