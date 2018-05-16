@@ -1,29 +1,60 @@
 {
-  "locations":
-  [
+  "locations": [
     {
-		"locationImage": "https://afar-production.imgix.net/uploads/images/post_images/images/qVj1FxN3tt/original_2ec4a48fa0a239d9df8c552cfd5c40ec.jpg?1468157243?ixlib=rails-0.3.0&auto=format%2Ccompress&crop=entropy&fit=crop&h=719&q=80&w=954&dpr=2",
-		"name": "Husk",
-		"locationAddress": "37 Rutledge St, Nashville, TN 37210",
-		"timeThatExNormallyGoes": "Afternoon"
+      "locationId": 1,
+      "locationImage": "https://afar-production.imgix.net/uploads/images/post_images/images/qVj1FxN3tt/original_2ec4a48fa0a239d9df8c552cfd5c40ec.jpg?1468157243?ixlib=rails-0.3.0&auto=format%2Ccompress&crop=entropy&fit=crop&h=719&q=80&w=954&dpr=2",
+      "name": "Husk",
+      "locationAddress": "37 Rutledge St, Nashville, TN 37210",
+      "timeThatExNormallyGoes": "Afternoon"
     },
     {
-    "locationImage": "https://i1.wp.com/www.anniereeves.com/wp-content/uploads/2014/10/pinewoodsocial3.jpg",
-    "name": "Pinewood Social",
-    "locationAddress": "33 Peabody St, Nashville, TN 37210",
-    "timeThatExNormallyGoes": "After Dark"
+      "locationId": 2,
+      "locationImage": "https://i1.wp.com/www.anniereeves.com/wp-content/uploads/2014/10/pinewoodsocial3.jpg",
+      "name": "Pinewood Social",
+      "locationAddress": "33 Peabody St, Nashville, TN 37210",
+      "timeThatExNormallyGoes": "After Dark"
     },
     {
-    "locationImage": "http://collegian.csufresno.edu/a/wp-content/uploads/2018/01/Cheesecake_Factory-620x330.jpg",
-    "name": "Cheesecake Factory",
-    "locationAddress": "2133 Green Hills Village Dr, Nashville, TN 37215",
-    "timeThatExNormallyGoes": "Dark"
+      "locationId": 3,
+      "locationImage": "http://collegian.csufresno.edu/a/wp-content/uploads/2018/01/Cheesecake_Factory-620x330.jpg",
+      "name": "Cheesecake Factory",
+      "locationAddress": "2133 Green Hills Village Dr, Nashville, TN 37215",
+      "timeThatExNormallyGoes": "Dark"
     },
     {
-    "locationImage": "http://gluten-free-bread.org/wp-content/uploads/2014/11/pfunkyGriddle1.jpg",
-    "name": "The Pfunky Griddle",
-    "locationAddress": "2800 Bransford Ave, Nashville, TN 37204",
-    "timeThatExNormallyGoes": "Morning"
+      "locationId": 4,
+      "locationImage": "http://gluten-free-bread.org/wp-content/uploads/2014/11/pfunkyGriddle1.jpg",
+      "name": "The Pfunky Griddle",
+      "locationAddress": "2800 Bransford Ave, Nashville, TN 37204",
+      "timeThatExNormallyGoes": "Morning"
+    },
+    {
+      "locationId": 5,
+      "locationImage": "http://www.starbuckseverywhere.net/bigimages/13/DSCN13571.jpg",
+      "name": "Starbucks",
+      "locationAddress": "438 Main Street, Space 168, Franklin, TN 37064",
+      "timeThatExNormallyGoes": "Morning"
+    },
+    {
+      "locationId": 6,
+      "locationImage": "http://nashville.citysaver.com/wp-content/uploads/sites/10/ZaniesComedyNightClubMakesMeLaugh-300x260.jpg",
+      "name": "Zanies Comedy Night Club",
+      "locationAddress": "2025 8th Ave S, Nashville, TN 37204",
+      "timeThatExNormallyGoes": "Dark"
+    },
+    {
+      "locationId": 7,
+      "locationImage": "http://media.bizj.us/view/img/3156101/nashvillezoonsh*1200xx558-315-41-0.jpg",
+      "name": "Nashville Zoo at Grassmere",
+      "locationAddress": "3777 Nolensville Pike, Nashville, TN 37211",
+      "timeThatExNormallyGoes": "Afternoon"
+    },
+    {
+      "locationId": 8,
+      "locationImage": "https://i.ytimg.com/vi/Ad8drDCN3AQ/hqdefault.jpg",
+      "name": "Play Dance Bar",
+      "locationAddress": "1519 Church St, Nashville, TN 37203",
+      "timeThatExNormallyGoes": "After Dark"
     }
   ]
 }
