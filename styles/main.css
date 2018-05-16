@@ -33,3 +33,7 @@ body {
   color: black;
   font-weight: bold;
 }
+
+.btn-group {
+  margin: 10px 5px 5px 10px;
+}
