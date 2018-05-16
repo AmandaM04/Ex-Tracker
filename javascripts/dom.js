@@ -1,26 +1,39 @@
 // Writing to the dom
-const writeEx = (ex) => {
-  let domstring = '';
-  domstring += `<div class="card">`;
-  domstring += `<img class="img-rounded" src="${ex.image}" width="50%">`;
-  domstring += `<h1>${ex.name}</h1>`;
-  domstring += `<p>Age: ${ex.age}</p>`;
-  domstring += `<p>Flaws: ${ex.flaws}</p>`;
-  domstring += `</div>`;
-  return domstring;
+const exOutputDiv = $('exSpot');
+const locationOutputDiv = $('exLocation');
+
+const writeEx = (exes) => {
+  exes.forEach((ex) => {
+    let domStrang = '';
+    domStrang += `<div class="card">`;
+    domStrang += `<img class="img-rounded" src="${ex.image}" width="50%">`;
+    domStrang += `<h1>${ex.name}</h1>`;
+    domStrang += `<p>Age: ${ex.age}</p>`;
+    domStrang += `<p>Flaws: ${ex.flaws}</p>`;
+    domStrang += `</div>`;
+    printToDom(domStrang);
+  });
 };
 
 const writeLocations = (locations) => {
-  let domstring = '';
   locations.forEach((location) => {
-    domstring += `<div class="locCard">`;
-    domstring += `<img src="${location.locationImage}" width="40%">`;
-    domstring += `<p>${location.name}</p>`;
-    domstring += `<p>${location.locationAddress}</p>`;
-    domstring += `<p>${location.timeThatExNormallyGoes}</p>`;
-    domstring += `</div>`;
+    let domString = '';
+    domString += `<div class="locCard">`;
+    domString += `<img src="${location.locationImage}" width="40%">`;
+    domString += `<p>${location.name}</p>`;
+    domString += `<p>${location.locationAddress}</p>`;
+    domString += `<p>${location.timeThatExNormallyGoes}</p>`;
+    domString += `</div>`;
+    printToDom2(domString);
   });
-  return domstring;
+};
+
+const printToDom = (exes) => {
+  exOutputDiv.append(exes);
+};
+
+const printToDom2 = (locations) => {
+  locationOutputDiv.append(locations);
 };
 
 module.exports = {
