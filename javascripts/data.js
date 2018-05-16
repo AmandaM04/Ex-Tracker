@@ -30,16 +30,17 @@ const whenLocationsLoads = () => {
 };
 
 const exCations = () => {
-  let exes = [];
-  let locations = [];
+  // let exes = [];
+  // let locations = [];
   return whenExLoads()
-    .then((result) => {
-      exes = [...result,];
-
+    .then((exes) => {
+      // exes = [...result,];
+      dom.writeEx(exes);
       return whenLocationsLoads();
-    }).then((result2) => {
-      locations = [...exes, ...result2,];
-      return Promise.resolve(exes, locations);
+    }).then((locations) => {
+      // locations = [...exes, ...result2,];
+      dom.writeLocations(locations);
+      // return Promise.resolve(exes, locations);
     }).catch((errorMsg) => {
       console.error(errorMsg);
     });
@@ -49,10 +50,7 @@ const exCations = () => {
 // };
 
 const initializer = () => {
-  exCations().then((exes, locations) => {
-    dom.writeEx(exes);
-    dom.writeLocations(locations);
-  });
+  exCations();
   // loadEx(whenExLoads, whenFails);
   // loadLocations(whenLocationsLoads, whenFails);
 };
