@@ -1,5 +1,6 @@
 // Error and success functions for AJAX call
 const dom = require('./dom');
+// const events = require('./events');
 
 const whenExLoads = () => {
   // console.log('data', data);
@@ -51,8 +52,24 @@ const exCations = () => {
 
 const initializer = () => {
   exCations();
+  letsSearch();
   // loadEx(whenExLoads, whenFails);
   // loadLocations(whenLocationsLoads, whenFails);
+};
+
+jQuery.expr[':'].iContains = function (a, i, m) {
+  return jQuery(a).text().toUpperCase()
+    .indexOf(m[3].toUpperCase()) >= 0;
+};
+
+const letsSearch = () => {
+  $('#search').keypress((event) => {
+    if (event.which === 13) {
+      $('.locCard').show();
+      const userInput = $('#search').val();
+      $(`#exLocation .locCard:not(:iContains(${userInput}))`).hide();
+    }
+  });
 };
 
 module.exports = initializer;
