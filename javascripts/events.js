@@ -14,21 +14,21 @@
 //   }
 // });
 
-// const filterLocations = () => {
-//   $('btn').on('click', () => {
-//     $('#locateMe .location-card').show();
-//     const button = $(event.target).html();
-//     if (button === 'Morning') {
-//       $('#locateMe').not('.Morning').toggle();
-//     } else if (button === 'Afternoon') {
-//       $('#locateMe .location-card').not('.Afternoon').toggle();
-//     } else if (button === 'Evening') {
-//       $('#locateMe .location-card').not('.Evening').toggle();
-//     } else if (button === 'After-Dark') {
-//       $('#locateMe .location-card').not('.After-Dark').toggle();
-//     }
-//   });
-// };
+const filterLocations = () => {
+  $('.btn').on('click', () => {
+    $('#exLocation .locCard').show();
+    const button = $(event.target).html();
+    if (button === 'Morning') {
+      $('#exLocation .locCard').not('.Morning').toggle();
+    } else if (button === 'Afternoon') {
+      $('#exLocation .locCard').not('.Afternoon').toggle();
+    } else if (button === 'Evening') {
+      $('#exLocation .locCard').not('.Evening').toggle();
+    } else if (button === 'After Dark') {
+      $('#exLocation .locCard').not('.After-Dark').toggle();
+    }
+  });
+};
 
 // jQuery.expr[':'].iContains = function (a, i, m) {
 //   return jQuery(a).text().toUpperCase()
@@ -53,5 +53,6 @@
 // });
 
 module.exports = {
-  // letsSearch,
+// letsSearch,
+  filterLocations,
 };

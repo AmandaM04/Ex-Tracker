@@ -1,6 +1,6 @@
 // Error and success functions for AJAX call
 const dom = require('./dom');
-// const events = require('./events');
+const events = require('./events');
 
 const whenExLoads = () => {
   // console.log('data', data);
@@ -53,6 +53,7 @@ const exCations = () => {
 const initializer = () => {
   exCations();
   letsSearch();
+  events.filterLocations();
   // loadEx(whenExLoads, whenFails);
   // loadLocations(whenLocationsLoads, whenFails);
 };
