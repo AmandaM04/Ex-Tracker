@@ -3,8 +3,6 @@ const dom = require('./dom');
 const events = require('./events');
 
 const whenExLoads = () => {
-  // console.log('data', data);
-  // $('#exSpot').append(writeBoth.writeEx(data.ex));
   return new Promise((resolve, reject) => {
     $.get('../db/ex.json')
       .done((data) => {
@@ -17,8 +15,6 @@ const whenExLoads = () => {
 };
 
 const whenLocationsLoads = () => {
-  // console.log('data', data);
-  // $('#exLocation').append(writeBoth.writeLocations(data.locations));
   return new Promise((resolve, reject) => {
     $.get('../db/locations.json')
       .done((data) => {
@@ -37,40 +33,53 @@ const exCations = () => {
     .then((exes) => {
       // exes = [...result,];
       dom.writeEx(exes);
-      return whenLocationsLoads();
-    }).then((locations) => {
-      // locations = [...exes, ...result2,];
-      dom.writeLocations(locations);
-      // return Promise.resolve(exes, locations);
-    }).catch((errorMsg) => {
-      console.error(errorMsg);
+      return whenLocationsLoads()
+        .then((locations) => {
+          dom.writeLocations(locations);
+          return Promise.resolve(exes, locations);
+        });
     });
 };
-// const whenFails = (error) => {
-//   console.log('error', error);
-// };
+
+const smashedData = () => {
+  return whenLocationsLoads()
+    .then((locations) => {
+      dom.writeLocations(locations);
+      return whenExLoads()
+        .then((exes) => {
+          dom.writeEx(exes);
+          const exCationsSmash = dataSmash(exes, locations);
+          console.error('what I need', exCationsSmash);
+          return Promise.resolve(exCations);
+        });
+    });
+};
+
+const dataSmash = (exes, locations) => {
+  const allData = [];
+  // this is where the smash work happens
+  exes.forEach((ex) => {
+    const singleEx = ex;
+    singleEx.relatedLocations = [];
+    for (let i = 0; i < ex.places.length; i++) {
+      locations.forEach((location) => {
+        if (ex.places[i] === location.locationId) {
+          singleEx.relatedLocations.push(location);
+        };
+      });
+    };
+    allData.push(singleEx);
+  });
+  return allData;
+};
 
 const initializer = () => {
   exCations();
-  letsSearch();
+  events.letsSearch();
   events.filterLocations();
-  // loadEx(whenExLoads, whenFails);
-  // loadLocations(whenLocationsLoads, whenFails);
 };
 
-jQuery.expr[':'].iContains = function (a, i, m) {
-  return jQuery(a).text().toUpperCase()
-    .indexOf(m[3].toUpperCase()) >= 0;
+module.exports = {
+  initializer,
+  smashedData,
 };
-
-const letsSearch = () => {
-  $('#search').keypress((event) => {
-    if (event.which === 13) {
-      $('.locCard').show();
-      const userInput = $('#search').val();
-      $(`#exLocation .locCard:not(:iContains(${userInput}))`).hide();
-    }
-  });
-};
-
-module.exports = initializer;
