@@ -3,9 +3,10 @@ body {
 }
 
 .card {
+  display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
-  max-height: 400px;
+  min-height: 400px;
   border: 2px solid grey;
   margin: auto;
   text-align: center;
@@ -36,4 +37,10 @@ body {
 
 .btn-group {
   margin: 10px 5px 5px 10px;
+}
+
+.images {
+  min-height: 175px;
+  margin: auto;
+  padding: auto;
 }
