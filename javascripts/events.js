@@ -1,18 +1,4 @@
 // Attaching all event listeners
-// $(':button').click(function () {
-//   if (this.id === 'Morning') {
-//     console.log('Morning clicked');
-//   }
-//   if (this.id === 'Afternoon') {
-//     console.log('Afternoon clicked');
-//   }
-//   if (this.id === 'Evening') {
-//     console.log('Evening clicked');
-//   }
-//   else if (this.id === 'After Dark') {
-//     console.log('After Dark clicked');
-//   }
-// });
 
 const filterLocations = () => {
   $('.btn').on('click', () => {
@@ -30,29 +16,27 @@ const filterLocations = () => {
   });
 };
 
-// jQuery.expr[':'].iContains = function (a, i, m) {
-//   return jQuery(a).text().toUpperCase()
-//     .indexOf(m[3].toUpperCase()) >= 0;
-// };
+jQuery.expr[':'].iContains = function (a, i, m) {
+  return jQuery(a).text().toUpperCase()
+    .indexOf(m[3].toUpperCase()) >= 0;
+};
 
-// const letsSearch = () => {
-//   $('#search').keypress((event) => {
-//     if (event.which === 13) {
-//       const userInput = $('#search').val();
-//       $(`#exLocation .locCard:not(:iContains(${userInput}))`).hide();
-//     }
-//   });
-// };
+const letsSearch = () => {
+  $('#search').keypress((event) => {
+    if (event.which === 13) {
+      const userInput = $('#search').val();
+      $(`#exLocation .locCard:not(:iContains(${userInput}))`).hide();
+    }
+  });
+};
 
-// $('.clickCard').click((e) => {
-//   /* data.singlePup is a function that returns a promise */
-//   alert($('.clickCard').index(this));
-//   // data.singlePup().then((pup) => {
-//   //   dom.printPup(pup);
-//   // });
-// });
+const clickEx = () => {
+  $(document).on('click', '.singleEx',(e) => {
+  });
+  clickEx();
+};
 
 module.exports = {
-// letsSearch,
+  letsSearch,
   filterLocations,
 };
